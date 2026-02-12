@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+    padding: 40px 0;
+}
+
+.cert-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* عنوان الصفحة */
+.title {
+    font-size: 42px;
+    color: #ffffff; /* أحمر */
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 10px; /* أقل من السابق */
+    text-shadow: 0 0 10px rgba(255,0,0,0.5);
+}
+
+/* خط تحت العنوان */
+.title-line {
+    width: 200px; /* طول الخط */
+    height: 4px; /* سماكة الخط */
+    border: none;
+    background: linear-gradient(90deg, #ff0000, #ffffff);
+    margin-bottom: 40px;
+    border-radius: 2px; /* حواف صغيرة للخط */
+}
+
+/* الصور */
+.cert-section img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    box-shadow: 0 6px 20px rgba(255,0,0,0.5);
+    margin-bottom: 30px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+
+.cert-section img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 40px rgba(255,0,0,0.7);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

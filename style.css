@@ -1,0 +1,199 @@
+/* ====== Global Reset ====== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ====== Body ====== */
+body{
+    background: linear-gradient(135deg, #000000, #000000);
+    color: rgb(0, 0, 0);
+    min-height: 100vh;
+}
+
+/* ====== Main Container ====== */
+.container{
+    text-align: center;
+    padding: 50px 20px;
+    color: rgb(255, 255, 255);
+   
+}
+
+/* Name */
+.container h1{
+    font-size: 48px;
+    color: #fff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 3px #ff0000,
+        0 0 20px #ff0000,
+        0 0 40px #000000,
+        0 0 80px #ff7a00;
+    animation: neonFlicker 2.5s infinite alternate;
+}
+
+/* Job title */
+.container h2{
+    margin-top: 10px;
+    font-size: 22px;
+    color: #ffffff;
+    letter-spacing: 4px;
+    text-shadow:
+        0 0 4px #e00000,
+        0 0 10px #000000,
+        0 0 10px #000000;
+    animation: neonPulse 3s infinite;
+}
+
+/* ====== Photo Section ====== */
+.photo{
+    display: flex;
+    justify-content: center;
+    margin: 70px 0;
+
+}
+.photo img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 50px rgba(255,0,0,0.9);
+}
+
+
+.photo img{
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ff0800;
+    box-shadow: 0 0 50px rgba(255, 4, 0, 0.7);
+
+}
+
+/* ====== Information Section ====== */
+.information{
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+
+    border: 2px solid #ff7a00;
+
+    /* Neon glow outside only */
+    box-shadow:
+        0 0 5px #ff0000,
+        0 0 5px #ff7a00,
+        0 0 5px #ffd000,
+        0 0 5px #ff7a00;
+
+    animation: neonGlow 2.5s infinite alternate;
+}
+
+/* Glow Animation */
+@keyframes neonGlow{
+    0%{
+        box-shadow:
+            0 0 5px #ff0000,
+            0 0 5px #ff7a00,
+            0 0 5px #ffd000,
+            0 0 5px #ff7a00;
+    }
+    100%{
+        box-shadow:
+            0 0 10px #ff0000,
+            0 0 20px #ff7a00,
+            0 0 40px #ffd000,
+            0 0 70px #ff7a00;
+    }
+}
+
+
+.information a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.information a:hover{
+    background: linear-gradient(90deg, #ff7a00);
+    color: black;
+    transform: scale(1.05);
+}
+
+/* ====== Social Section ====== */
+.social{
+    width: 80%;
+    max-width: 500px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 25px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 15px;
+    border: 1px solid #ff0000;
+}
+
+.social a{
+    display: block;
+    text-decoration: none;
+    color: #fdfdfd;
+    padding: 10px;
+    margin: 6px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.social a:hover{
+    color: white;
+    background: linear-gradient(90deg, #ff0000);
+    border-radius: 6px;
+}
+
+/* ====== HR Style ====== */
+hr{
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, #ff0000);
+    width: 80%;
+    margin: 70px auto;
+}
+
+
+
+
+/* ====== Animations ====== */
+@keyframes neonFlicker{
+    0%{
+        opacity: 1;
+        text-shadow:
+            0 0 5px #fff,
+            0 0 10px #000000,
+            0 0 20px #000000,
+            0 0 40px #ff7a00,
+            0 0 80px #ff7a00;
+    }
+    50%{
+        opacity: 0.85;
+        text-shadow:
+            0 0 2px #fff,
+            0 0 6px #000000,
+            0 0 12px #ff0000,
+            0 0 24px #000000,
+            0 0 50px #ff7a00;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
